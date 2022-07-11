@@ -1,5 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+    --clr-primary: #ef233c;
+    --clr-bg-white: whitesmoke;
+    --clr-text-white: whitesmoke;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    font-family: "Raleway";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+p {
+    font-size: .9em;
+    line-height: 1.3em;
+}
+
+header {
+    background-image: url(images/hero-cover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.hero-overlay {
+    background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.8));
+    height: 100%;
+}
+
+.hero-text {
+    text-align: left;
+    width: 35%;
+    color: var(--clr-text-white);
+    margin-left: 15%;
+}
+
+.hero-text p {
+    margin: 40px 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-text-white);
+    font-size: .9em;
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: var(--clr-primary);
+    border: 3px solid var(--clr-primary);
+    border-radius: 5px;
+}
+
+a:hover {
+
+    color: var(--clr-primary);
+    background-color: var(--clr-bg-white);
+    border: 3px solid var(--clr-primary);
+}
+
+main {
+    margin: 0 15%;
+}
+
+section {
+    margin: 100px 0;
+}
+
+#first-section .container,
+#second-section .container {
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 320px;
+    width: 45%;
+    overflow: hidden;
+}
+
+#third-section p {
+    margin: 20px 0;
+}
+
+.send-donation {
+    display: flex;
+    align-items: flex-start;
+    width: 48%;
+    background-color: #ff6b7026;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.send-donation .container {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.send-donation img {
+    width: 5vw;
+    margin: 0 40px 0 20px;
 }
