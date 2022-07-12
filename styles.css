@@ -1,10 +1,11 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 :root {
     --clr-primary: #ef233c;
-    --clr-bg-white: #FFF6F4;
-    --clr-text-white: #FFF6F4;
+    --clr-bg-white: #ffffff;
+    --clr-text-white: #ffffff;
     --clr-bg-pink: #ffbff6a9;
 }
 
@@ -14,13 +15,18 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 20px;
     font-family: "Raleway";
-    background-color: #ffe4df2a;
+    background-color: #ffece92a;
     color: #1e3746;
 }
 
+/* General Selectors */
 .container {
     display: flex;
     flex-direction: column;
@@ -56,33 +62,9 @@ p {
     line-height: 1.3em;
 }
 
-header {
-    background-image: url(images/hero-cover.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-}
-
-.hero-overlay {
-    background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.8));
-    height: 100%;
-}
-
-.hero-text {
-    text-align: left;
-    width: 35%;
-    color: var(--clr-text-white);
-    margin-left: 15%;
-}
-
-.hero-text p {
-    margin: 40px 0;
-}
-
-a {
+a.button {
     text-decoration: none;
-    font-size: .9em;
+    font-size: .8em;
     font-weight: 600;
     padding: 6px 10px;
     border-radius: 5px;
@@ -92,7 +74,7 @@ a {
     transition: 0.3s;
 }
 
-a:hover {
+a.button:hover {
     color: var(--clr-text-white);
     background-color: var(--clr-primary);
     border: 3px solid var(--clr-primary);
@@ -103,9 +85,75 @@ main {
 }
 
 section {
-    margin: 80px 0 0;
+    padding: 80px 0 0;
 }
 
+/* Header */
+header {
+    background-image: url(images/hero-cover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    overflow: hidden
+}
+
+/* Navbar */
+nav {
+    width: 100vw;
+    position: fixed;
+    background-color: #fff6f4e6;
+    padding: 0 15%;
+    overflow: hidden;
+}
+
+nav>a {
+    border: 2px solid var(--clr-primary);
+    border-radius: 5px;
+}
+
+nav img {
+    width: 60px;
+    padding: 5px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 30px 15px;
+    color: var(--clr-primary);
+    font-size: .8em;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--clr-text-white);
+    background-color: var(--clr-primary);
+    padding: 30px 15px;
+}
+
+/* Hero Section */
+.hero-overlay {
+    background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.8));
+    height: 100%;
+}
+
+.hero-text {
+    text-align: left;
+    width: 35%;
+    color: var(--clr-text-white);
+    margin: 25vh 15%;
+}
+
+.hero-text p {
+    margin: 40px 0;
+}
+
+/* Video and Audio Section */
 #video-section .container,
 #image-section .container {
     align-items: flex-start;
@@ -116,6 +164,7 @@ section {
     text-align: justify;
 }
 
+/* How to Send Donation Section */
 #send-donation p {
     margin: 20px 0;
 }
@@ -141,7 +190,8 @@ section {
     margin: 0 40px 0 20px;
 }
 
-#stats {
+/* Statistics Section */
+#stats .flex-row {
     background-color: #ffae0026;
     padding: 60px;
     border-radius: 10px;
@@ -149,6 +199,7 @@ section {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
 }
 
+/* Help Section */
 #extend-help .flex-row {
     align-items: flex-start;
     height: 260px;
@@ -183,6 +234,7 @@ section {
     width: 35%;
 }
 
+/* Donate Zakat Section */
 #donate-zakat .item {
     width: 31%;
     text-align: center;
@@ -205,6 +257,7 @@ section {
     padding: 0 10px;
 }
 
+/* Subscription Section */
 #newsletter p {
     margin: 20px 0;
 }
@@ -214,7 +267,7 @@ section {
 }
 
 #newsletter input#email {
-    width: 300px;
+    width: 260px;
     border: 2px solid var(--clr-primary);
     outline: none;
     line-height: 2em;
@@ -239,6 +292,7 @@ section {
     background-color: var(--clr-primary);
 }
 
+/* Footer */
 footer {
     background-color: var(--clr-bg-pink);
     text-align: center;
