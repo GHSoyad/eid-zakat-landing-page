@@ -263,7 +263,7 @@ nav ul li a:hover {
     padding: 20px 10px;
 }
 
-/* Subscription Section */
+/* Subscription Form */
 #newsletter input#email {
     width: 260px;
     border: 2px solid var(--clr-primary);
@@ -294,7 +294,7 @@ nav ul li a:hover {
 footer {
     background-color: var(--clr-bg-pink);
     text-align: center;
-    padding: 20px 0 0;
+    padding: 20px 0;
     margin-top: 80px;
 }
 
@@ -309,4 +309,26 @@ footer h2 {
 
 footer p {
     font-size: .7em;
+}
+
+/* Credits */
+footer legend {
+    color: var(--clr-primary);
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+fieldset p {
+    padding: 10px 0;
+}
+
+fieldset a {
+    text-decoration: none;
+    color: var(--clr-primary);
+    font-weight: bold;
+}
+
+fieldset a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
