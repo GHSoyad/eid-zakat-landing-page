@@ -34,11 +34,28 @@ body {
     align-items: center;
 }
 
+.container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
 .flex-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flex-row-center {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
 }
 
 h1 {
@@ -60,6 +77,7 @@ h4 {
 p {
     font-size: .9em;
     line-height: 1.3em;
+    padding: 20px 0;
 }
 
 a.button {
@@ -81,28 +99,29 @@ a.button:hover {
 }
 
 main {
-    margin: 0 15%;
+    padding: 0 15%;
+    margin: 0 auto;
 }
 
 section {
-    padding: 80px 0 0;
+    padding: 100px 0 0;
 }
 
 /* Header */
 header {
-    background-image: url(images/hero-cover.png);
+    background-image: url(images/hero-cover.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     height: 80vh;
-    overflow: hidden
+    overflow: hidden;
 }
 
 /* Navbar */
 nav {
     width: 100vw;
     position: fixed;
-    background-color: #fff6f4e6;
+    background-color: #fff6f4f2;
     padding: 0 15%;
     overflow: hidden;
 }
@@ -150,25 +169,21 @@ nav ul li a:hover {
 }
 
 .hero-text p {
-    margin: 40px 0;
+    padding: 40px 0;
 }
 
-/* Video and Audio Section */
-#video-section .container,
-#image-section .container {
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 320px;
+/* Video and Image Section */
+#video-section .container-left,
+#image-section .container-left {
     width: 45%;
-    overflow: hidden;
     text-align: justify;
 }
 
-/* How to Send Donation Section */
-#send-donation p {
-    margin: 20px 0;
+#image-section img {
+    width: 100%;
 }
 
+/* How to Send Donation Section */
 .send-donation {
     display: flex;
     align-items: flex-start;
@@ -180,31 +195,25 @@ nav ul li a:hover {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
 }
 
-.send-donation .container {
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
 .send-donation img {
     width: 5vw;
     margin: 0 40px 0 20px;
 }
 
 /* Statistics Section */
-#stats .flex-row {
+#stats .flex-row-center {
     background-color: #ffae0026;
-    padding: 60px;
+    padding: 60px 60px 40px;
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
 }
 
-/* Help Section */
-#extend-help .flex-row {
-    align-items: flex-start;
-    height: 260px;
-    padding: auto;
+#stats p {
+    padding-top: 10px;
 }
+
+/* Extend Help Section */
 
 #extend-help h1,
 #donate-zakat h1 {
@@ -213,8 +222,6 @@ nav ul li a:hover {
 
 .involve {
     width: 23%;
-    height: 100%;
-    min-height: max-content;
     text-align: center;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
@@ -222,16 +229,16 @@ nav ul li a:hover {
     background-color: var(--clr-bg-pink);
 }
 
+.involve img {
+    width: 35%;
+}
+
 .involve h4 {
-    margin: 25px 0;
+    margin: 25px 0 0;
 }
 
 .involve p {
-    text-align: center;
-}
-
-.involve img {
-    width: 35%;
+    padding-bottom: 10px;
 }
 
 /* Donate Zakat Section */
@@ -253,19 +260,10 @@ nav ul li a:hover {
 }
 
 #donate-zakat p {
-    margin: 20px 0;
-    padding: 0 10px;
+    padding: 20px 10px;
 }
 
 /* Subscription Section */
-#newsletter p {
-    margin: 20px 0;
-}
-
-#newsletter .container {
-    align-items: flex-start;
-}
-
 #newsletter input#email {
     width: 260px;
     border: 2px solid var(--clr-primary);
@@ -296,8 +294,12 @@ nav ul li a:hover {
 footer {
     background-color: var(--clr-bg-pink);
     text-align: center;
-    padding-top: 20px;
-    margin-top: 40px;
+    padding: 20px 0 0;
+    margin-top: 80px;
+}
+
+footer div {
+    padding: 0 15%;
 }
 
 footer h2 {
@@ -306,6 +308,5 @@ footer h2 {
 }
 
 footer p {
-    padding: 20px 0;
     font-size: .7em;
 }
